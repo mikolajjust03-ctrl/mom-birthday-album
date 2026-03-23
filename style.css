@@ -1,24 +1,81 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #fdf6ec;
     text-align: center;
-    background-color: #fff5f7;
+    margin: 0;
 }
 
 h1 {
-    color: #d63384;
+    color: #8b5e3c;
+    margin-top: 30px;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+p {
+    color: #5a4633;
 }
 
-.photo {
-    margin: 15px;
+/* TIMELINE */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
 }
 
-.photo img {
-    width: 250px;
+/* vertical line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #d4a373;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* containers */
+.container {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+}
+
+/* left side */
+.left {
+    left: 0;
+}
+
+/* right side */
+.right {
+    left: 50%;
+}
+
+/* content box */
+.content {
+    background-color: #fffaf3;
+    padding: 15px;
     border-radius: 10px;
+}
+
+/* images */
+.content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* circles on timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -8px;
+    background-color: #d4a373;
+    border-radius: 50%;
+    top: 30px;
+}
+
+.right::after {
+    left: -8px;
 }
