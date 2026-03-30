@@ -1,7 +1,4 @@
-html {
-    scroll-behavior: smooth;
-}
-
+/* GENERAL */
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
@@ -10,52 +7,170 @@ body {
     overflow: hidden;
 }
 
-/* MAP */
-#map {
-    position: absolute;
-    width: 300vw;
-    height: 300vh;
-    display: grid;
-    grid-template-columns: repeat(3, 100vw);
-    grid-template-rows: repeat(3, 100vh);
-}
-
-/* SECTIONS */
+/* SECTIONS (slides) */
 .section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
-}
 
-/* POSITIONS */
-.center { grid-column: 2; grid-row: 2; }
-.up { grid-column: 2; grid-row: 1; }
-.down { grid-column: 2; grid-row: 3; }
-.left { grid-column: 1; grid-row: 2; }
-.right { grid-column: 3; grid-row: 2; }
+    padding: 40px;
+    box-sizing: border-box;
+
+    transition: transform 0.6s ease;
+}
 
 /* TEXT */
 h1 {
-    font-size: 60px;
+    font-size: 48px;
+    margin: 20px 0 10px;
     text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    margin: 5px 0;
 }
 
 h2 {
     margin-bottom: 20px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 10px;
-    width: 80%;
+/* MAIN PHOTO */
+.main-photo {
+    max-width: 70%;
+    max-height: 60vh;
+    object-fit: contain;
 }
 
-.grid img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+/* GLOBAL IMAGE RULE (NO CROPPING) */
+img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+}
+
+/* GRID: 4 photos */
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 70%;
+    justify-items: center;
+}
+
+/* GRID: vertical (2 photos) */
+.grid-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* GRID: 3 photos with captions */
+.grid-3 {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.grid-3 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-3 p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* MINIMAP */
+#minimap {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 140px;
+    height: 180px;
+
+    border: 1px solid #3b0d0d;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#dot {
+    width: 10px;
+    height: 10px;
+    background-color: #3b0d0d;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* SCROLL SMOOTHNESS (backup) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* HOLIDAY BIG PHOTOS */
+.grid-big {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 60%;
+}
+
+.grid-big img {
+    max-height: 300px;
+}
+
+/* CAPTIONS */
+.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* CLICK TO ENLARGE */
+img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
 }

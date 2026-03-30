@@ -3,75 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <title>Dla Mamy i Taty</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div id="map">
 
     <!-- CENTER -->
-    <section class="section center">
+    <section class="section" data-x="0" data-y="0">
+        <img src="images/glowne_zdjecie.jpeg" class="main-photo">
         <h1>Dla Mamy i Taty</h1>
         <p>z okazji urodzin, imienin i jeszcze raz imienin</p>
     </section>
 
-    <!-- UP (parents) -->
-    <section class="section up">
-        <h2>Agnieszka i Wojtek</h2>
-        <div class="grid">
-            <img src="images/rodzice1.jpeg">
-            <img src="images/rodzice2_tytul.jpeg">
-            <img src="images/rodzice_galowo.jpeg">
-            <img src="images/rodzice_slub_radka.jpeg">
-            <img src="images/rodzice_slub_radka2.jpeg">
-            <img src="images/rodzice_zdjecie_slubne.jpeg">
+    <!-- ================= DOWN (NARTY) ================= -->
+    <section class="section" data-x="0" data-y="1">
+        <h2>Narty</h2>
+        <div class="grid-4">
+            <img src="images/rodzice_narty_2.jpeg">
+            <img src="images/narty_trio.jpeg">
+            <img src="images/08.04.15_narty.jpeg">
+            <img src="images/rodzice_narty.jpeg">
         </div>
     </section>
 
-    <!-- DOWN (home + dog) -->
-    <section class="section down">
-        <h2>Dom</h2>
-        <div class="grid">
-            <img src="images/szenzol5.jpeg">
-            <img src="images/szenzol6.jpeg">
+    <section class="section" data-x="0" data-y="2">
+        <div class="grid-vertical">
+            <img src="images/cyc_narty.jpeg">
+            <img src="images/narty_mama_cyc.jpeg">
+        </div>
+    </section>
+
+    <section class="section" data-x="0" data-y="3">
+        <div class="grid-3">
+            <div>
+                <img src="images/narty_tata_cyc.jpeg">
+                <p>Ojciec i Cyc</p>
+            </div>
+            <div>
+                <img src="images/selfie_narty.jpeg">
+                <p>Selfie na szczycie</p>
+            </div>
+            <div>
+                <img src="images/narty_gondola.jpeg">
+                <p>Gondola</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= UP (RODZICE) ================= -->
+    <section class="section" data-x="0" data-y="-1">
+        <div class="grid-4">
+            <img src="images/rodzice.jpeg">
+            <img src="images/Rodzice_1.jpeg">
+            <img src="images/Rodzice_2.jpeg">
+            <img src="images/rodzice_galowo.jpeg">
+        </div>
+    </section>
+
+    <section class="section" data-x="0" data-y="-2">
+        <div class="grid-4">
+            <img src="images/rodzice_slub_radka.jpeg">
+            <img src="images/rodzice_slub_radka_2.jpeg">
+            <img src="images/Rodzice_zdjęcie_slubne.jpeg">
+            <img src="images/rodzice_festiwal.jpeg">
+        </div>
+    </section>
+
+    <section class="section" data-x="0" data-y="-3">
+        <div class="grid-4">
+            <img src="images/rodzice_góry.jpeg">
+            <img src="images/rodzice_góry_2.jpeg">
+            <img src="images/rodzice_góry_3.jpeg">
+            <img src="images/rodzice_Rotterdam.jpeg">
+        </div>
+    </section>
+
+    <!-- ================= LEFT (DOG) ================= -->
+    <section class="section" data-x="-1" data-y="0">
+        <div class="grid-4">
+            <img src="images/szenzolek.jpeg">
+            <img src="images/szenzolek_2.jpeg">
+            <img src="images/szenzolek_4.jpeg">
+            <img src="images/szenzol_5.jpeg">
+        </div>
+    </section>
+
+    <section class="section" data-x="-2" data-y="0">
+        <div class="grid-4">
+            <img src="images/szenzol_6.jpeg">
             <img src="images/szenzol_tata.jpeg">
             <img src="images/szenzol_wcisniety.jpeg">
-            <img src="images/piciu.jpeg">
-            <img src="images/cyc_kwasny.jpeg">
+            <img src="images/mama_szenzol.jpeg">
         </div>
     </section>
 
-    <!-- LEFT (ski) -->
-    <section class="section left">
-        <h2>Narty</h2>
-        <div class="grid">
-            <img src="images/narty_trio.jpeg">
-            <img src="images/narty_gondola.jpeg">
-            <img src="images/selfie_narty.jpeg">
-            <img src="images/narty_mama_cyc.jpeg">
-            <img src="images/narty_tata_cyc.jpeg">
-        </div>
-    </section>
+    <!-- ================= RIGHT (HOLIDAYS) ================= -->
+    <!-- RIGHT 1 -->
+<section class="section" data-x="1" data-y="0">
+    <div class="grid-big">
 
-    <!-- RIGHT (summer / travel) -->
-    <section class="section right">
-        <h2>Podróże</h2>
-        <div class="grid">
-            <img src="images/safari1.jpeg">
-            <img src="images/safari2.jpeg">
-            <img src="images/rome1.jpeg">
-            <img src="images/rome2.jpeg">
+        <div class="photo">
+            <img src="images/safari_1.jpeg">
+            <p>Safari</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/safari_2.jpeg">
+            <p>Afrykańska przygoda</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- RIGHT 2 -->
+<section class="section" data-x="2" data-y="0">
+    <div class="grid-4">
+
+        <div class="photo">
+            <img src="images/Rome1.jpeg">
+            <p>Rzym</p>
+        </div>
+
+        <div class="photo">
+            <img src="images/Rome_2.jpeg">
+            <p>Włochy</p>
+        </div>
+
+        <img src="images/Rome_3.jpeg">
+        <img src="images/rodzice_rzym.jpeg">
+
+    </div>
+</section>
+
+<!-- RIGHT 3 -->
+<section class="section" data-x="3" data-y="0">
+    <div class="grid-big">
+
+        <div class="photo">
             <img src="images/haga_plaza.jpeg">
+            <p>Haga</p>
         </div>
-    </section>
+
+        <div class="photo">
+            <img src="images/Utrecht.jpeg">
+            <p>Utrecht</p>
+        </div>
+
+    </div>
+</section>
 
 </div>
 
-<script src="script.js"></script>
+<div id="minimap">
+    <div id="dot"></div>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
