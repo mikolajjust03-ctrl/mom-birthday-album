@@ -174,3 +174,27 @@ img:hover {
     max-height: 90vh;
     object-fit: contain;
 }
+
+.split-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.left-side,
+.right-side {
+    width: 40%;
+}
+
+.hero-photo {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.right-side {
+    font-size: 24px;
+    line-height: 1.6;
+}

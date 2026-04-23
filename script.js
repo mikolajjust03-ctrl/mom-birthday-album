@@ -5,7 +5,7 @@ let mode = "free"; // free, vertical, horizontal
 
 const MIN_X = -2;
 const MAX_X = 3;
-const MIN_Y = -3;
+const MIN_Y = -4;
 const MAX_Y = 3;
 
 function updatePosition() {
