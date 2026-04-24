@@ -101,3 +101,43 @@ document.querySelectorAll("img").forEach(img => {
 });
 
 updatePosition();
+
+let startX = 0;
+let startY = 0;
+
+document.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+});
+
+document.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+    let endY = e.changedTouches[0].clientY;
+
+    let diffX = startX - endX;
+    let diffY = startY - endY;
+
+    let threshold = 50; // czułość
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // ruch poziomy
+        if (diffX > threshold && x < MAX_X) {
+            x++;
+            mode = "horizontal";
+        } else if (diffX < -threshold && x > MIN_X) {
+            x--;
+            mode = "horizontal";
+        }
+    } else {
+        // ruch pionowy
+        if (diffY > threshold && y < MAX_Y) {
+            y++;
+            mode = "vertical";
+        } else if (diffY < -threshold && y > MIN_Y) {
+            y--;
+            mode = "vertical";
+        }
+    }
+
+    updatePosition();
+});
