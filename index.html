@@ -1,183 +1,262 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Dla Mamy i Taty</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Dla Mamy i Taty</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div id="map">
 
-    <!-- ================= ŚRODEK ================= -->
-    <section class="section" data-x="0" data-y="0">
-        <img src="images/glowne_zdjecie.jpeg" class="main-photo">
+<!-- ===== ŚRODEK ===== -->
+<section class="section main-center" data-x="0" data-y="0">
+<img src="images/glowne_zdjecie.jpeg" class="main-photo">
+<h1>Dla Mamy i Taty</h1>
+<p>z okazji urodzin, imienin i jeszcze raz imienin</p>
+<p>życzymy ...</p>
+<p class="main-date">23 kwietnia 2026</p>
+</section>
 
-        <h1>Dla Mamy i Taty</h1>
-        <p>z okazji urodzin, imienin i jeszcze raz imienin</p>
-        <p class="main-date">23 kwietnia 2026</p>
-    </section>
+<!-- ===== ŻYCZENIA ===== -->
+<section class="section" data-x="-1" data-y="0">
+<h2>...wielu wspaniałych prezentów</h2>
+</section>
 
-    <!-- ================= DÓŁ - NARTY ================= -->
-    <section class="section" data-x="0" data-y="1">
-        <h2>Narty</h2>
-        <div class="grid-4">
-            <img src="images/rodzice_narty_2.jpeg">
-            <img src="images/narty_trio.jpeg">
-            <img src="images/08.04.15_narty.jpeg">
-            <img src="images/rodzice_narty.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="1" data-y="0">
+<h2>...podróży dookoła całego świata</h2>
+</section>
 
-    <section class="section" data-x="0" data-y="2">
-        <div class="grid-vertical">
-            <img src="images/cyc_narty.jpeg">
-            <img src="images/narty_mama_cyc.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="0" data-y="-1">
+<h2>...niezapomnianych wspomnień</h2>
+</section>
 
-    <section class="section" data-x="0" data-y="3">
-        <div class="grid-3">
-            <div class="photo">
-                <img src="images/narty_tata_cyc.jpeg">
-                <p>Ojciec i Cyc</p>
-            </div>
+<section class="section" data-x="0" data-y="1">
+<h2>... wyjazdów zimowych w rodzinnym gronie</h2>
+</section>
 
-            <div class="photo">
-                <img src="images/selfie_narty.jpeg">
-                <p>Selfie na szczycie</p>
-            </div>
+<!-- ===== NARTY ===== -->
+<section class="section" data-x="0" data-y="2">
+<div class="row-3">
+<img src="images/rodzice_narty_2.jpeg">
+<img src="images/narty_trio.jpeg">
+<img src="images/08.04.15_narty.jpeg">
+</div>
+</section>
 
-            <div class="photo">
-                <img src="images/narty_gondola.jpeg">
-                <p>Gondola</p>
-            </div>
-        </div>
-    </section>
+<section class="section" data-x="0" data-y="3">
+<h3>Austria 2025</h3>
+<div class="grid-vertical">
+<img src="images/cyc_narty.jpeg">
+<img src="images/narty_mama_cyc.jpeg">
+</div>
+</section>
 
-    <!-- ================= GÓRA - RODZICE ================= -->
-    <section class="section" data-x="0" data-y="-1">
-        <div class="grid-4">
-            <img src="images/rodzice.jpeg">
-            <img src="images/Rodzcie_1.jpeg">
-            <img src="images/Rodzcie_2.jpeg">
-            <img src="images/rodzice_galowo.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="0" data-y="4">
+<div class="grid-3">
+<img src="images/narty_tata_cyc.jpeg">
+<img src="images/selfie_narty.jpeg">
+<img src="images/narty_gondola.jpeg">
+</div>
+</section>
 
-    <section class="section" data-x="0" data-y="-2">
-        <div class="grid-4">
-            <img src="images/rodzice _slub_radka.jpeg">
-            <img src="images/rodzice_slub_radka_2.jpeg">
-            <img src="images/rodzice_festiwal.jpeg">
-            <img src="images/rodzice_Rotterdam.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="0" data-y="5">
+<div class="row-2">
+<img src="images/kwas.jpeg">
+<img src="images/mikinar.jpeg">
+</div>
+</section>
 
-    <section class="section" data-x="0" data-y="-3">
-        <div class="grid-4">
-            <img src="images/rodzice_góry.jpeg">
-            <img src="images/rodzice_góry_2.jpeg">
-            <img src="images/rodzice_góry_3.jpeg">
-            <img src="images/rodzcie_rzym.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="0" data-y="6">
+<div class="row-2">
+<img src="images/WANG.jpeg">
+<img src="images/Samotnia.jpeg">
+</div>
+</section>
 
-    <!-- ================= GÓRA 4 - ŚLUB ================= -->
-    <section class="section split-slide" data-x="0" data-y="-4">
+<!-- ===== LEWO (PIES - PRZYWRÓCONY WIERSZ) ===== -->
+<section class="section" data-x="-2" data-y="0">
+<div class="split">
+<img src="images/pielucha.jpeg">
 
-        <div class="left-side">
-            <img src="images/Rodzice_zdjęcie_slubne.jpeg" class="hero-photo">
-        </div>
+<p class="poem">
+Mój piesek Dżońcio – oto go macie –<br>
+To mój największy w świecie przyjaciel.<br><br>
 
-        <div class="right-side">
-            <h2>Dla Was</h2>
-            <p>
-                Tutaj wpiszę później wiersz,<br>
-                kilka wspomnień i słów od serca.
-            </p>
-        </div>
+Codziennie w kącie kanapy siadam<br>
+I z moim Dżońciem gadam i gadam.<br><br>
 
-    </section>
+Gadam i gadam, a Dżońcio milczy,<br>
+Lecz mnie rozumie piesek najmilszy.
+</p>
+</div>
+</section>
 
-    <!-- ================= LEWO - PIES ================= -->
-    <section class="section" data-x="-1" data-y="0">
-        <div class="grid-4">
-            <img src="images/szenzolek.jpeg">
-            <img src="images/szenzolek_2.jpeg">
-            <img src="images/szenzolek_4.jpeg">
-            <img src="images/szenzol_5.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="-3" data-y="0">
+<div class="row-4">
+<img src="images/szenzol_6.jpeg">
+<img src="images/szenzol_tata.jpeg">
+<img src="images/szenzol_wcisniety.jpeg">
+<img src="images/mama_szenzol.jpeg">
+</div>
+</section>
 
-    <section class="section" data-x="-2" data-y="0">
-        <div class="grid-4">
-            <img src="images/szenzol_6.jpeg">
-            <img src="images/szenzol_tata.jpeg">
-            <img src="images/szenzol_wcisniety.jpeg">
-            <img src="images/mama_szenzol.jpeg">
-        </div>
-    </section>
+<section class="section" data-x="-4" data-y="0">
+<div class="sniezka-layout">
+    <div class="left-col">
+        <img src="images/sniezka1.jpeg">
+        <img src="images/sniezka2.jpeg">
+    </div>
+    <div class="right-row">
+        <img src="images/sniezka3.jpeg">
+        <img src="images/sniezka4.jpeg">
+    </div>
+</div>
+</section>
 
-    <!-- ================= PRAWO - WAKACJE ================= -->
-    <section class="section" data-x="1" data-y="0">
-        <div class="grid-big">
+<section class="section" data-x="-5" data-y="0">
+    <div class="row-3">
+        <img src="images/szenzolek.jpeg">
+        <img src="images/szenzolek_2.jpeg">
+        <img src="images/szenzolek_4.jpeg">
+    </div>
+</section>
 
-            <div class="photo">
-                <img src="images/safari_1.jpeg">
-                <p>Safari</p>
-            </div>
+<section class="section" data-x="-6" data-y="0">
+<h2>A kiedyś była taka mała kruszynka</h2>
+<div class="row-2">
+<img src="images/kruszynka.jpeg">
+<img src="images/kruszynka2.jpeg">
+</div>
+</section>
 
-            <div class="photo">
-                <img src="images/safari_2.jpeg">
-                <p>Afrykańska przygoda</p>
-            </div>
+<section class="section" data-x="-7" data-y="0">
+<h2>Wszędzie dobrze...</h2>
+<img src="images/buju.jpeg">
+<p>... ale najlepiej u tatusia</p>
+</section>
 
-        </div>
-    </section>
+<section class="section" data-x="-8" data-y="0">
+<h2>... albo u mamusi</h2>
+<img src="images/buju2.jpeg">
+</section>
 
-    <section class="section" data-x="2" data-y="0">
-        <div class="grid-4">
+<!-- ===== PRAWO ===== -->
+<section class="section" data-x="2" data-y="0">
+<h2>HAKUNA MATA</h2>
+<div class="row-2">
+<img src="images/safari_1.jpeg">
+<img src="images/safari_2.jpeg">
+</div>
+<p>Kenya - Safari 2026</p>
+</section>
 
-            <div class="photo">
-                <img src="images/Rome1.jpeg">
-                <p>Rzym</p>
-            </div>
+<section class="section" data-x="3" data-y="0">
+<h2>Italia - Rome</h2>
+<div class="row-3">
+<img src="images/Rome1.jpeg">
+<img src="images/Rome_2.jpeg">
+<img src="images/Rome_3.jpeg">
+</div>
+</section>
 
-            <div class="photo">
-                <img src="images/Rome_2.jpeg">
-                <p>Włochy</p>
-            </div>
+<section class="section" data-x="4" data-y="0">
+<h2>Nederland - 2024</h2>
+<div class="row-2">
+<img src="images/haga_plaza.jpeg">
+<img src="images/Utrecht.jpeg">
+</div>
+</section>
 
-            <img src="images/Rome_3.jpeg">
-            <img src="images/rodzice_rzym.jpeg">
+<section class="section" data-x="5" data-y="0">
+<h2>Polowanie na rozgwiazdy</h2>
+<div class="row-2">
+<img src="images/rozgwiazdy_kenia1.jpeg">
+<img src="images/rozgwiazdy_kenia2.jpeg">
+</div>
+</section>
 
-        </div>
-    </section>
+<section class="section" data-x="6" data-y="0">
+<h2>Italia - Iseo - 2025</h2>
+<div class="row-2">
+<img src="images/woda.jpeg">
+<img src="images/iseo.jpeg">
+</div>
+</section>
 
-    <section class="section" data-x="3" data-y="0">
-        <div class="grid-big">
+<section class="section" data-x="7" data-y="0">
+<h2>Atak szczytowy na Śnieżkę</h2>
+<img src="images/Karpacz.jpeg">
+<p>Karpacz - Wielkanoc - 2026</p>
+</section>
 
-            <div class="photo">
-                <img src="images/haga_plaza.jpeg">
-                <p>Haga</p>
-            </div>
+<section class="section" data-x="8" data-y="0">
+<h2>Tajlandia</h2>
+<img src="images/taj.jpeg">
+</section>
 
-            <div class="photo">
-                <img src="images/Utrecht.jpeg">
-                <p>Utrecht</p>
-            </div>
+<section class="section" data-x="9" data-y="0">
+<h2>Tajlandia</h2>
+<div class="row-2">
+<img src="images/slon.jpeg">
+<img src="images/slon2.jpeg">
+</div>
+</section>
 
-        </div>
-    </section>
+<section class="section" data-x="10" data-y="0">
+<h2>Szwecja 2025</h2>
+<img src="images/rower.jpeg">
+</section>
+
+<!-- ===== GÓRA ===== -->
+<section class="section" data-x="0" data-y="-2">
+<h2>Żagle - Norwegia - Lofoty</h2>
+<img src="images/zagle.jpeg">
+</section>
+
+<section class="section" data-x="0" data-y="-3">
+<div class="grid-4">
+<img src="images/rodnart.jpeg">
+<img src="images/rodzice_slub_radka_2.jpeg">
+<img src="images/rodzice_festiwal.jpeg">
+<img src="images/rodzice_Rotterdam.jpeg">
+</div>
+</section>
+
+<section class="section split-slide" data-x="0" data-y="-4">
+<div class="left-side">
+<img src="images/slub.jpeg">
+</div>
+<div class="right-side">
+<h2>23. Wrzesień</h2>
+</div>
+</section>
+
+<section class="section" data-x="0" data-y="-5">
+<h2>A piciu będzie?</h2>
+<img src="images/piciu.jpeg">
+</section>
+
+<section class="section" data-x="0" data-y="-6">
+<h2>Niech zwycięża ...</h2>
+<img src="images/mama_kibol.jpeg">
+<p>... Lech Kolejorz!</p>
+</section>
+
+<section class="section split-slide" data-x="0" data-y="-7">
+<div class="left-side">
+<img src="images/rodzice_malowanie.jpeg">
+</div>
+<div class="right-side">
+<h2>impreza u Damiana</h2>
+<p>Pablo Wojtasso w akcji</p>
+</div>
+</section>
 
 </div>
 
-<!-- ================= MINIMAPA ================= -->
-<div id="minimap">
-    <div id="dot"></div>
-</div>
+<div id="minimap"><div id="dot"></div></div>
 
 <script src="script.js"></script>
 </body>

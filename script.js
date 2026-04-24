@@ -1,13 +1,13 @@
 let x = 0;
 let y = 0;
+let mode = "free";
 
-let mode = "free"; // free, vertical, horizontal
+const MIN_X = -8;
+const MAX_X = 10;
+const MIN_Y = -7;
+const MAX_Y = 6;
 
-const MIN_X = -2;
-const MAX_X = 3;
-const MIN_Y = -4;
-const MAX_Y = 3;
-
+/* ===== RUCH ===== */
 function updatePosition() {
     document.querySelectorAll(".section").forEach(sec => {
         const sx = parseInt(sec.dataset.x);
@@ -16,17 +16,16 @@ function updatePosition() {
         const offsetX = (sx - x) * window.innerWidth;
         const offsetY = (sy - y) * window.innerHeight;
 
-        sec.style.transform = `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px))`;
+        sec.style.transform =
+            `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px))`;
     });
 
-    // IMPORTANT: unlock directions automatically at center
-    if (x === 0 && y === 0) {
-        mode = "free";
-    }
+    if (x === 0 && y === 0) mode = "free";
 
     updateMinimap();
 }
 
+/* ===== MINIMAPA ===== */
 function updateMinimap() {
     const dot = document.getElementById("dot");
 
@@ -37,8 +36,10 @@ function updateMinimap() {
     dot.style.top = mapY + "%";
 }
 
+/* ===== KLAWISZE ===== */
 document.addEventListener("keydown", (e) => {
-    if (e.key.toLowerCase() === "b") {
+
+    if (e.key === "b" || e.key === "B") {
         x = 0;
         y = 0;
         mode = "free";
@@ -47,26 +48,16 @@ document.addEventListener("keydown", (e) => {
     }
 
     if (mode === "free") {
-        if (e.key === "ArrowUp" && y > MIN_Y) {
-            y--;
-            mode = "vertical";
-        }
-        if (e.key === "ArrowDown" && y < MAX_Y) {
-            y++;
-            mode = "vertical";
-        }
-        if (e.key === "ArrowLeft" && x > MIN_X) {
-            x--;
-            mode = "horizontal";
-        }
-        if (e.key === "ArrowRight" && x < MAX_X) {
-            x++;
-            mode = "horizontal";
-        }
-    } else if (mode === "vertical") {
+        if (e.key === "ArrowUp" && y > MIN_Y) { y--; mode = "vertical"; }
+        if (e.key === "ArrowDown" && y < MAX_Y) { y++; mode = "vertical"; }
+        if (e.key === "ArrowLeft" && x > MIN_X) { x--; mode = "horizontal"; }
+        if (e.key === "ArrowRight" && x < MAX_X) { x++; mode = "horizontal"; }
+    } 
+    else if (mode === "vertical") {
         if (e.key === "ArrowUp" && y > MIN_Y) y--;
         if (e.key === "ArrowDown" && y < MAX_Y) y++;
-    } else if (mode === "horizontal") {
+    } 
+    else if (mode === "horizontal") {
         if (e.key === "ArrowLeft" && x > MIN_X) x--;
         if (e.key === "ArrowRight" && x < MAX_X) x++;
     }
@@ -74,12 +65,12 @@ document.addEventListener("keydown", (e) => {
     updatePosition();
 });
 
+/* ===== LIGHTBOX — NAPRAWIONY ===== */
+document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("click", (e) => {
 
-// ================= LIGHTBOX =================
-const images = document.querySelectorAll("img");
+        e.stopPropagation(); // 🔥 ważne
 
-images.forEach(img => {
-    img.addEventListener("click", () => {
         const overlay = document.createElement("div");
         overlay.className = "lightbox";
 
@@ -90,11 +81,23 @@ images.forEach(img => {
         overlay.appendChild(bigImg);
         document.body.appendChild(overlay);
 
+        // blokuje scroll
+        document.body.style.overflow = "hidden";
+
+        // zamykanie
         overlay.addEventListener("click", () => {
             overlay.remove();
+            document.body.style.overflow = "hidden";
+        });
+
+        document.addEventListener("keydown", function esc(e) {
+            if (e.key === "Escape") {
+                overlay.remove();
+                document.removeEventListener("keydown", esc);
+                document.body.style.overflow = "hidden";
+            }
         });
     });
 });
 
-// init
 updatePosition();

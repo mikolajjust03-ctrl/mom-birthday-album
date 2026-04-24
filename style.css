@@ -1,200 +1,154 @@
-/* GENERAL */
 body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background-color: #f3efe9;
-    color: #3b0d0d;
-    overflow: hidden;
+margin: 0;
+font-family: 'Playfair Display', serif;
+background-color: #f3efe9;
+color: #3b0d0d;
+overflow: hidden;
 }
 
-/* SECTIONS (slides) */
 .section {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 40px;
-    box-sizing: border-box;
-
-    transition: transform 0.6s ease;
+position: absolute;
+width: 100vw;
+height: 100vh;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 30px;
+text-align: center;
+transition: transform 0.6s ease;
 }
 
-/* TEXT */
-h1 {
-    font-size: 48px;
-    margin: 20px 0 10px;
-    text-align: center;
+/* ===== MNIEJSZE ODSTĘPY NA GŁÓWNEJ ===== */
+.main-center h1 {
+margin: 10px 0 5px;
 }
 
-p {
-    font-size: 18px;
-    text-align: center;
-    margin: 5px 0;
+.main-center p {
+margin: 5px 0;
 }
 
-h2 {
-    margin-bottom: 20px;
-}
-
-/* MAIN PHOTO */
-.main-photo {
-    max-width: 70%;
-    max-height: 60vh;
-    object-fit: contain;
-}
-
-/* GLOBAL IMAGE RULE (NO CROPPING) */
+/* ===== OBRAZY ===== */
 img {
-    max-width: 100%;
-    max-height: 220px;
-    object-fit: contain;
+max-width: 100%;
+max-height: 280px;
+object-fit: contain;
 }
 
-/* GRID: 4 photos */
+/* ===== GRIDY ===== */
 .grid-4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    width: 70%;
-    justify-items: center;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+width: 70%;
 }
 
-/* GRID: vertical (2 photos) */
-.grid-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-/* GRID: 3 photos with captions */
 .grid-3 {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
+display: flex;
+gap: 20px;
 }
 
-.grid-3 div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.grid-vertical {
+display: flex;
+flex-direction: column;
+gap: 20px;
 }
 
-.grid-3 p {
-    margin-top: 10px;
-    font-size: 14px;
+/* ===== RZĘDY ===== */
+.row-2 {
+display: flex;
+gap: 20px;
 }
 
-/* MINIMAP */
+/* ===== WIERSZ ===== */
+.split {
+display: flex;
+gap: 40px;
+align-items: center;
+}
+
+.poem {
+max-width: 400px;
+line-height: 1.6;
+text-align: left;
+}
+
+/* ===== ŚNIEŻKA UKŁAD ===== */
+.sniezka-layout {
+display: flex;
+gap: 20px;
+}
+
+.left-col {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.right-row {
+display: flex;
+gap: 10px;
+align-items: center;
+}
+
+/* ===== POWIĘKSZENIA ===== */
+.section[data-y="4"] img {
+max-height: 320px;
+}
+
+.section[data-y="5"] img {
+max-height: 360px;
+}
+
+/* ===== MINIMAPA ===== */
 #minimap {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    width: 140px;
-    height: 180px;
-
-    border: 1px solid #3b0d0d;
-    background-color: rgba(0, 0, 0, 0.05);
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 140px;
+height: 180px;
+border: 1px solid #3b0d0d;
 }
 
 #dot {
-    width: 10px;
-    height: 10px;
-    background-color: #3b0d0d;
-
-    position: absolute;
-    transform: translate(-50%, -50%);
+width: 10px;
+height: 10px;
+background: #3b0d0d;
+position: absolute;
+transform: translate(-50%, -50%);
 }
 
-/* SCROLL SMOOTHNESS (backup) */
-html {
-    scroll-behavior: smooth;
+body {
+    overflow: hidden;
 }
 
-/* HOLIDAY BIG PHOTOS */
-.grid-big {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 60%;
-}
-
-.grid-big img {
-    max-height: 300px;
-}
-
-/* CAPTIONS */
-.photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.photo p {
-    margin-top: 8px;
-    font-size: 14px;
-}
-
-/* CLICK TO ENLARGE */
-img {
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-img:hover {
-    transform: scale(1.03);
-}
-
-/* LIGHTBOX */
+/* 🔥 NAPRAWIA LIGHTBOX */
 .lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
+    position: fixed !important;
+    inset: 0 !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100vw !important;
+    height: 100vh !important;
 
-    z-index: 9999;
+    background: rgba(0,0,0,0.95) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 999999 !important;
 }
 
 .lightbox-img {
-    max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    object-fit: contain !important;
 }
 
-.split-slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-.left-side,
-.right-side {
-    width: 40%;
-}
-
-.hero-photo {
-    max-width: 100%;
-    max-height: 70vh;
-    object-fit: contain;
-}
-
-.right-side {
-    font-size: 24px;
-    line-height: 1.6;
+/* 🔥 zabezpieczenie przed konfliktami */
+.section {
+    z-index: 1;
 }
